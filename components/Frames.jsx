@@ -47,7 +47,7 @@ const Frames = () => {
       <div className="frame bg-frame-bg transform-3d">
         <div>
           <video
-            src="./video_optimized.mp4"
+            src="./video2.mp4"
             autoPlay
             loop
             muted

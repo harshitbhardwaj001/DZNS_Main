@@ -7,7 +7,7 @@ const index = () => {
     const [clicked, setClicked] = useState(false);
   return (
     <>
-        <div className="nav overflow-hidden z-[5] fixed h-full w-full">
+        <div className="nav overflow-hidden z-[15] fixed h-full w-full">
         <Navbar clicked={clicked} setClicked={setClicked} />
         </div>
         <div className={`${clicked ? "hidden" : "block"}`}>

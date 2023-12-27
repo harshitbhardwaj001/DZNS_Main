@@ -442,7 +442,7 @@
   }
 
   .frame-video-right {
-    @apply left-[calc(var(--side-big)/2*var(--index)+var(--gutter))];
+    @apply left-[10rem];
   }
 
   .frame-text-right > * {

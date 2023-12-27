@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import image1 from "../public/bg.png"
-import image2 from "../public/bg.png"
-import image3 from "../public/bg.png"
-import image4 from "../public/bg.png"
-import image5 from "../public/bg.png"
+import bg from "../public/bg1.gif"
 import Image from "next/image";
 import {FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa'
 import gsap from 'gsap';
@@ -22,7 +18,8 @@ const ShopHeader = () => {
   return (
     <div className='h-[650px] w-[99.5vw] relative bg-cover overflow-x-hidden'>
         <div className='absolute top-0 right-0 w-[110vw] h-full transition-opacity z-0'>
-            <Image alt="hero" src="https://media.giphy.com/media/3oEduMhFrYvKk4giac/giphy.gif" unoptimized fill />
+            <div className='bg-[#000] opacity-[0.85] w-[200vw] h-[650px] absolute top-0 left-0 z-[7]'>test</div>
+            <Image alt="hero" src={bg} unoptimized fill />
             {/* <Image alt="hero" src={image2} fill className={`${image===2 ? "opacity-100" : "opacity-0" } transition-all duration-1000 `} />
             <Image alt="hero" src={image3} fill className={`${image===3 ? "opacity-100" : "opacity-0" } transition-all duration-1000 `} />
             <Image alt="hero" src={image4} fill className={`${image===4 ? "opacity-100" : "opacity-0" } transition-all duration-1000 `} />

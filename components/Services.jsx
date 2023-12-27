@@ -8,32 +8,32 @@ const Services = () => {
     {
         name: "GRAPHICS",
         label: "Build your business",
-        image: "/services.jpg" 
+        image: "/image1.png" 
     },
     {
         name: "VIDEO EDITING",
         label: "Build your business",
-        image: "/services.jpg" 
+        image: "/image3.png" 
     },
     {
         name: "UIUX / WEB DEVELOPMENT",
         label: "Build your online presence",
-        image: "/services.jpg" 
+        image: "/image4.png" 
     },
     {
         name: "DESIGN CONSULTATION",
         label: "Business Consultation",
-        image: "/services.jpg" 
+        image: "/image2.png" 
     },
     {
         name: "PHOTOGRAPHY/CINEMATOGRAPHY",
         label: "Capture your moments",
-        image: "/services.jpg" 
+        image: "/image5.png" 
     },
     {
         name: "PACKAGE",
         label: "Build your own deal",
-        image: "/services.jpg" 
+        image: "/image6.png" 
     },
   ]
   return (
@@ -49,10 +49,11 @@ const Services = () => {
                   onClick={() => router.push(`/search?q-${name.toLowerCase()}`)}
                 >
                    <div className='absolute z-10 text-white left-5 top-4' >
-                     <span>{label}</span>
-                     <h6 className='font-extrabold text-1xl'>{name}</h6>
+                     <span className='text-[1.2rem]'>{label}</span>
+                     <h6 className='text-[1.3rem] font-black'>{name}</h6>
                    </div>
-                   <div className="h-[390px] w-[400px]">
+                   <div className="h-[400px] w-[400px]">
+                    <div className='bg-[#000] w-[400px] h-[400px] z-[12] visible'></div>
                      <Image src={image} fill alt='services'/>
                    </div>
                 </li>

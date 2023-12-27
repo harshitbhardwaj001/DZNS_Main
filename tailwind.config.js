@@ -19,7 +19,7 @@ module.exports = {
           "home-bg": "#1E1E1E"
       },
       backgroundImage: {
-          "1-bg": "url(/1.jpg)",
+          "1-bg": "url(/dzns.jpg)",
           "2-bg": "url(/2.jpg)",
           "3-bg": "url(/3.jpg)",
           "4-bg": "url(/4.jpg)",

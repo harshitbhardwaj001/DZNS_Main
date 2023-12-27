@@ -3,7 +3,7 @@ import { useStateProvider } from "../../context/StateContext";
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import Image from "next/image";
-import { SET_USER_IMAGE, SET_USER_INFO } from "../../utils/constants";
+import { HOST, SET_USER_IMAGE, SET_USER_INFO } from "../../utils/constants";
 import axios from "axios";
 import { reducerCases } from "../../context/constants";
 
@@ -28,6 +28,8 @@ const index = () => {
       if(userInfo?.description) handleData.description = userInfo?.description;
       if(userInfo?.fullname) handleData.fullName = userInfo?.fullname;
     }
+
+    console.log(userInfo?.imageName)
 
     if(userInfo?.imageName) {
       const fileName = image;
@@ -84,7 +86,7 @@ const index = () => {
           userInfo: {
             ...userInfo,
             ...data,
-            image: imageName.length ? (HOST + "/" + imageName) : false,
+            image: imageName.length ? HOST + "/" + imageName : false,
           }
         })
       }
