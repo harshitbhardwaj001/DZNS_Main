@@ -1,26 +1,28 @@
-export const categories = [
-    {
-        name: "GRAPHICS",
-        image: "/image1.png" 
-    },
-    {
-        name: "VIDEO EDITING",
-        image: "/image3.png" 
-    },
-    {
-        name: "UIUX / WEB DEVELOPMENT",
-        image: "/image4.png" 
-    },
-    {
-        name: "DESIGN CONSULTATION",
-        image: "/image2.png" 
-    },
-    {
-        name: "PHOTOGRAPHY/CINEMATOGRAPHY",
-        image: "/image5.png" 
-    },
-    {
-        name: "PACKAGE",
-        image: "/image6.png" 
-    },
-  ]
+const categories = [
+  {
+    name: "GRAPHICS",
+    logo: "/image1.png",
+  },
+  {
+    name: "VIDEO EDITING",
+    logo: "/image3.png",
+  },
+  {
+    name: "UIUX / WEB DEVELOPMENT",
+    logo: "/image4.png",
+  },
+  {
+    name: "DESIGN CONSULTATION",
+    logo: "/image2.png",
+  },
+  {
+    name: "PHOTOGRAPHY/CINEMATOGRAPHY",
+    logo: "/image5.png",
+  },
+  {
+    name: "PACKAGE",
+    logo: "/image6.png",
+  },
+];
+
+export default categories;
