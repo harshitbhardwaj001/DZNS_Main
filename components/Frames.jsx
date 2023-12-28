@@ -33,7 +33,7 @@ const Frames = () => {
   return (
     <>
       <div className="frame transform-3d">
-        <div>
+        <div className="backdrop-blur-[5px]">
           <h2>Our Work</h2>
         </div>
       </div>
@@ -45,9 +45,18 @@ const Frames = () => {
       </div>
 
       <div className="frame bg-frame-bg transform-3d">
-        <div>
+        {/* <div>
           <video
             src="./video2.mp4"
+            autoPlay
+            loop
+            muted
+            className="frame-video frame-video-right"
+          />
+        </div> */}
+        <div>
+          <video
+            src="./home.mp4"
             autoPlay
             loop
             muted
@@ -62,9 +71,7 @@ const Frames = () => {
         <div className="frame-text-right">
           <h3>Graphic Design</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur elit adipisicing. Nemo
-            fugit, rerum dolorem assumenda consequatur dicta error iure
-            laboriosam temporibus.
+          DZNS aims to create graphic designs that express the emotions, intentions, and interests of our clients to their intended audience. We aim to amalgamate various styles, technologies, and ideas to create graphics that communicate to the audience and not simply catch their attention.
           </p>
         </div>
       </div>
@@ -79,7 +86,21 @@ const Frames = () => {
 
       <div className="frame bg-frame-bg transform-3d">
         <div>
-          <div className="bg-3-bg frame-media frame-right" />
+          <div className="bg-3-bg frame-media frame-right left-[38rem]" />
+        </div>
+        <div className="frame transform-3d" />
+        <div>
+          <div className="bg-4-bg frame-media frame-left left-[-40rem]" />
+        </div>
+      </div>
+      <div className="frame transform-3d" />
+
+      <div className="frame bg-frame-bg transform-3d">
+        <div>
+          <div className="bg-5-bg frame-media frame-left left-[38rem]" />
+        </div>
+        <div>
+          <div className="bg-6-bg frame-media frame-right left-[-40rem]" />
         </div>
       </div>
 
@@ -89,39 +110,43 @@ const Frames = () => {
         <div className="frame-text-left">
           <h3>Video Editing</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur elit. Rerum dolorem
-            assumenda consequatur dicta error iure laboriosam temporibus omnis
-            quae eaque aliquam esse unde accusamus dolores non soluta.
+          DZNS creates impactful videos, audio-visuals, motion graphics, as well as 3D videos/motion flyers, VFX, and other motion pictures that grasp the audience's attention. The video editing team at DZNS stives to create meaningful content that encapsulates the purpose of the video in striking new formats with new technologies and ideas. 
           </p>
         </div>
       </div>
-
-      <div className="frame bg-frame-bg transform-3d">
-        <div>
-          <div className="bg-4-bg frame-media frame-right" />
-        </div>
-      </div>
-
       <div className="frame transform-3d">
         <div>
           <video
-            src="./video_optimized.mp4"
+            src="./video1.mp4"
             autoPlay
             loop
             muted
-            className="frame-video frame-video-left"
+            className="frame-video frame-video-left left-[10rem]"
           />
         </div>
       </div>
-
       <div className="frame transform-3d" />
-      <div className="frame transform-3d" />
+      <div className="frame transform-3d">
+        <div className="frame bg-frame-bg transform-3d">
+          <video
+            src="./video3.mp4"
+            autoPlay
+            loop
+            muted
+            className="frame-video frame-video-right left-[-13rem]"
+          />
+        </div>
+      </div>
+      
 
-      <div className="frame bg-frame-bg transform-3d">
+      {/* <div className="frame bg-frame-bg transform-3d">
         <div>
           <div className="bg-5-bg frame-media frame-right" />
         </div>
-      </div>
+      </div> */}
+
+      <div className="frame transform-3d" />
+      <div className="frame transform-3d" />
 
       <div className="frame bg-frame-bg transform-3d">
         <div>

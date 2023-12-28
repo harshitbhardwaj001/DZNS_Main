@@ -12,7 +12,7 @@ const Index = () => {
     <div className='overflow-hidden fixed h-full w-full z-[3]'>
     <Navbar clicked={clicked} setClicked={setClicked}/>
     </div>
-    <div className='h-[4000px]'>
+    <div className='h-[4500px]'>
     <Head>
       <title>DZNS Studio</title>
     </Head>
