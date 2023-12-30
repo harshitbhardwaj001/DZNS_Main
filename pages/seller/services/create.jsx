@@ -6,8 +6,10 @@ import ImageUpload from "../../../components/ImageUpload";
 import axios from "axios";
 import { ADD_SERVICE_ROUTE } from "../../../utils/constants";
 import { useRouter } from "next/router";
+import { useCookies } from "react-cookie";
 
 const create = () => {
+  const [cookies] = useCookies();
   const [clicked, setClicked] = useState(false);
   const router = useRouter();
   const [files, setFiles] = useState([]);
@@ -47,7 +49,7 @@ const create = () => {
   const addService = async () => {
     const { category, description, price, revisions, time, title, shortDesc } =
       data;
-    console.log(data)
+    console.log(data);
     if (
       category &&
       description &&
@@ -59,7 +61,7 @@ const create = () => {
       revisions > 0 &&
       time > 0
     ) {
-      console.log("entered")
+      console.log("entered");
       const formData = new FormData();
       files.forEach((file) => formData.append("images", file));
       const serviceData = {
@@ -74,13 +76,13 @@ const create = () => {
       };
 
       const response = await axios.post(ADD_SERVICE_ROUTE, formData, {
-        withCredentials: true,
         headers: {
           "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${cookies.jwt}`,
         },
         params: serviceData,
       });
-      if(response.status === 201) {
+      if (response.status === 201) {
         router.push("/seller/services");
       }
     }
@@ -125,6 +127,7 @@ const create = () => {
                   id="category"
                   className="bg-gray-500 border border-gray-300 text-white text-sm rounded-lg focus:ring-[#F4FF00] focus:border-[#F4FF00] block w-full p-4"
                   onChange={handleChange}
+                  value={data.category}
                 >
                   {categories.map(({ name }) => (
                     <option key={name} value={name}>

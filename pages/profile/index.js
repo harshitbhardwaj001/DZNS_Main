@@ -6,9 +6,11 @@ import Image from "next/image";
 import { HOST, SET_USER_IMAGE, SET_USER_INFO } from "../../utils/constants";
 import axios from "axios";
 import { reducerCases } from "../../context/constants";
+import { useCookies } from "react-cookie";
 
 const index = () => {
   const router = useRouter();
+  const [cookies] = useCookies();
   const [clicked, setClicked] = useState(false);
   const [{ userInfo }, dispatch] = useStateProvider();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -22,28 +24,28 @@ const index = () => {
   });
 
   useEffect(() => {
-    const handleData = { ...data }
-    if(userInfo) {
-      if(userInfo?.username) handleData.userName = userInfo?.username;
-      if(userInfo?.description) handleData.description = userInfo?.description;
-      if(userInfo?.fullname) handleData.fullName = userInfo?.fullname;
+    const handleData = { ...data };
+    if (userInfo) {
+      if (userInfo?.username) handleData.userName = userInfo?.username;
+      if (userInfo?.description) handleData.description = userInfo?.description;
+      if (userInfo?.fullname) handleData.fullName = userInfo?.fullname;
     }
 
-    console.log(userInfo?.imageName)
+    console.log(userInfo?.imageName);
 
-    if(userInfo?.imageName) {
+    if (userInfo?.imageName) {
       const fileName = image;
       fetch(userInfo.imageName).then(async (response) => {
         const contentType = response.headers.get("content-type");
         const blob = await response.blob();
         const files = new File([blob], fileName, { contentType });
         setImage(files);
-      })
+      });
     }
 
     setData(handleData);
     setIsLoaded(true);
-  }, [userInfo])
+  }, [userInfo]);
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -63,21 +65,27 @@ const index = () => {
       const response = await axios.post(
         SET_USER_INFO,
         { ...data },
-        { withCredentials: true }
+        {
+          headers: {
+            Authorization: `Bearer ${cookies.jwt}`,
+          },
+        }
       );
       if (response.data.userNameError) {
         setErrorMessage("Enter a unique username.");
       } else {
-        setErrorMessage("")
+        setErrorMessage("");
         let imageName = "";
-        if(image) {
+        if (image) {
           const formData = new FormData();
           formData.append("images", image);
-          const {data:{img}} = await axios.post(SET_USER_IMAGE, formData, {
-            withCredentials: true,
+          const {
+            data: { img },
+          } = await axios.post(SET_USER_IMAGE, formData, {
             headers: {
-              "Content-Type" : "multipart/form-data",
-            }
+              Authorization: `Bearer ${cookies.jwt}`,
+              "Content-Type": "multipart/form-data",
+            },
           });
           imageName = img;
         }
@@ -87,10 +95,9 @@ const index = () => {
             ...userInfo,
             ...data,
             image: imageName.length ? HOST + "/" + imageName : false,
-          }
-        })
+          },
+        });
       }
-
     } catch (err) {
       console.log(err);
     }
@@ -111,7 +118,9 @@ const index = () => {
           <div className="flex flex-col items-center justify-start min-h-[80vh] gap-3">
             {errorMessage && (
               <div className="mt-[5rem] mb-[-7rem]">
-                <span className="text-red-600 font-bold z-[10] visible">{errorMessage}</span>
+                <span className="text-red-600 font-bold z-[10] visible">
+                  {errorMessage}
+                </span>
               </div>
             )}
             <h2 className="text-3xl w-[426px] mt-[7rem]">

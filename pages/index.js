@@ -9,10 +9,10 @@ import { Sound } from "../components";
 export default function Home() {
   useEffect(() => {
     const tl = gsap.timeline();
-    
+
     tl.to(".Nav", {
       autoAlpha: 1, // Show the Nav div
-      delay: 6.5 // Set the duration of the animation
+      delay: 6.5, // Set the duration of the animation
     });
   }, []);
   return (
@@ -24,18 +24,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-      <div className='overflow-hidden fixed h-full w-full'>
-      <Loader />
-    </div>
-        
+        <div className="overflow-hidden fixed h-full w-full">
+          <Loader />
+        </div>
+
         <div className="Nav h-full w-full invisible">
-        <HeroSection />
+          <HeroSection />
         </div>
       </main>
-      <div className='relative z-[5]'>
-    <Sound />
+      <div className="relative z-[5]">
+        <Sound />
+      </div>
     </div>
-    </div>
-    
   );
 }

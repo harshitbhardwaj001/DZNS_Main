@@ -8,7 +8,7 @@ import axios from "axios";
 import { useCookies } from "react-cookie";
 
 const AuthWrapper = ({ type }) => {
-  const [cookies, setCookies] = useCookies()
+  const [cookies, setCookies] = useCookies();
   const [{ showLoginModal, showSignupModal }, dispatch] = useStateProvider();
   const [values, setValues] = useState({ email: "", password: "" });
 
@@ -21,16 +21,16 @@ const AuthWrapper = ({ type }) => {
       const { email, password } = values;
       if (email && password) {
         const {
-          data: { user,jwt },
+          data: { user, jwt },
         } = await axios.post(
           type === "login" ? LOGIN_ROUTE : SIGNUP_ROUTE,
           { email, password },
           { withCredentials: true }
         );
-        setCookies("jwt", { jwt })
+        setCookies("jwt", jwt);
         dispatch({ type: reducerCases.CLOSE_AUTH_MODAL });
-        if(user) {
-          dispatch({type: reducerCases.SET_USER, userInfo: user});
+        if (user) {
+          dispatch({ type: reducerCases.SET_USER, userInfo: user });
           window.location.reload();
         }
       }

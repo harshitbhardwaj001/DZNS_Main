@@ -144,7 +144,7 @@ export const setUserImage = async (req, res, next) => {
       }
       return res.status(400).send("Cookie Error.");
     }
-    return res.status(400).send("Image not included.")
+    return res.status(400).send("Image not included.");
   } catch (err) {
     console.log(err);
     return res.status(500).send("Internal Server Error.");
