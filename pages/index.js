@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useEffect } from "react";
 import { HeroSection } from "../components/HeroSection";
 import { Sound } from "../components";
+import LaunchTeaser from "../components/LaunchTeaser";
 
 export default function Home() {
   useEffect(() => {
@@ -24,13 +25,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="overflow-hidden fixed h-full w-full">
+        <LaunchTeaser />
+
+        {/* <div className="overflow-hidden fixed h-full w-full">
           <Loader />
         </div>
 
         <div className="Nav h-full w-full invisible">
           <HeroSection />
-        </div>
+        </div> */}
       </main>
       <div className="relative z-[5]">
         <Sound />
