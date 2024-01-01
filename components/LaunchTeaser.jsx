@@ -50,10 +50,10 @@ const LaunchTeaser = () => {
           alt="Logo"
           className="absolute top-8 left-5"
         />
-        <h1 className="w-full flex justify-center items-center font-extrabold text-[#F4FF00] relative top-[40%] text-[1.6rem] left-10 max-sm:left-8 max-xs:left-1 leading-8 text-center">
+        <h1 className="w-full flex justify-center items-center font-extrabold text-[#F4FF00] relative top-[40%] text-[1.6rem] left-10 max-sm:left-8 max-xs:left-1 max-xs:top-[25%] leading-8 text-center">
           You really thought <br /> this was it?
         </h1>
-        <div className="flex gap-5 absolute xxl:top-[45rem] xxl:left-[41%] xl:top-[25rem] xl:left-[35%] lg:top-[22rem] lg:left-[27%] md:top-[22rem] md:left-[19%] max-xs:top-[22.5rem] max-sm:left-[18%] max-xs:grid max-xs:grid-cols-2 max-xs:left-[16%]">
+        <div className="flex gap-5 absolute xxl:top-[45rem] xxl:left-[41%] xl:top-[25rem] xl:left-[35%] lg:top-[22rem] lg:left-[27%] md:top-[22rem] md:left-[19%] max-xs:top-[18.5rem] max-sm:left-[18%] max-xs:grid max-xs:grid-cols-2 max-xs:left-[16%]">
           <CountdownCircleTimer
             {...timerProps}
             colors="#F4FF00"
