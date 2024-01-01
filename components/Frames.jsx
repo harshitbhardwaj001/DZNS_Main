@@ -1,33 +1,33 @@
-import React from "react"
+import React from "react";
 
 const Frames = () => {
-  if (typeof window !== "undefined" ) {
+  if (typeof window !== "undefined") {
     let zSpacing = -1000,
       lastPos = zSpacing / 5,
       $frames = document.getElementsByClassName("frame"),
       frames = Array.from($frames),
-      zVals = []
+      zVals = [];
 
     window.onscroll = function () {
       let top = document.documentElement.scrollTop,
-        delta = lastPos - top
+        delta = lastPos - top;
 
-      lastPos = top
+      lastPos = top;
 
       frames.forEach(function (n, i) {
-        zVals.push(i * zSpacing + zSpacing)
-        zVals[i] += delta * -5.5
+        zVals.push(i * zSpacing + zSpacing);
+        zVals[i] += delta * -5.5;
         let frame = frames[i],
           transform = `translateZ(${zVals[i]}px)`,
-          opacity = zVals[i] < Math.abs(zSpacing) / 1.8 ? 1 : 0
+          opacity = zVals[i] < Math.abs(zSpacing) / 1.8 ? 1 : 0;
         frame.setAttribute(
           "style",
           `transform: ${transform}; opacity: ${opacity}`
-        )
-      })
-    }
+        );
+      });
+    };
 
-    window.scrollTo(0, 1)
+    window.scrollTo(0, 1);
   }
 
   return (
@@ -71,7 +71,11 @@ const Frames = () => {
         <div className="frame-text-right">
           <h3>Graphic Design</h3>
           <p>
-          DZNS aims to create graphic designs that express the emotions, intentions, and interests of our clients to their intended audience. We aim to amalgamate various styles, technologies, and ideas to create graphics that communicate to the audience and not simply catch their attention.
+            DZNS aims to create graphic designs that express the emotions,
+            intentions, and interests of our clients to their intended audience.
+            We aim to curate and create various styles, technologies, and ideas
+            to create graphics that communicate to the audience and not simply
+            catch their attention.
           </p>
         </div>
       </div>
@@ -110,7 +114,11 @@ const Frames = () => {
         <div className="frame-text-left">
           <h3>Video Editing</h3>
           <p>
-          DZNS creates impactful videos, audio-visuals, motion graphics, as well as 3D videos/motion flyers, VFX, and other motion pictures that grasp the audience's attention. The video editing team at DZNS stives to create meaningful content that encapsulates the purpose of the video in striking new formats with new technologies and ideas. 
+            DZNS helps create impactful videos, audio-visuals, motion graphics, as
+            well as 3D videos/motion flyers, VFX, and other motion pictures that
+            grasp the audience's attention. The video editing team at DZNS
+            stives to create meaningful content that encapsulates the purpose of
+            the video in striking new formats with new technologies and ideas.
           </p>
         </div>
       </div>
@@ -137,7 +145,6 @@ const Frames = () => {
           />
         </div>
       </div>
-      
 
       {/* <div className="frame bg-frame-bg transform-3d">
         <div>
@@ -166,7 +173,7 @@ const Frames = () => {
         <div>&copy;{new Date().getFullYear()} DZNS Studio</div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Frames
+export default Frames;
