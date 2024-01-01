@@ -17,3 +17,5 @@ export const EDIT_SERVICE_ROUTE = `${SERVICES_ROUTES}/edit-service`;
 export const SEARCH_SERVICE_ROUTE = `${SERVICES_ROUTES}/search-services`;
 
 export const CREATE_ORDER = `${ORDERS_ROUTES}/create`;
+export const ORDER_SUCCESS_ROUTE = `${ORDERS_ROUTES}/success`;
+export const GET_BUYER_ORDERS_ROUTE = `${ORDERS_ROUTES}/get-buyer-orders`;

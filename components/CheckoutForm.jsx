@@ -3,12 +3,14 @@ import {
   PaymentElement,
   useStripe,
   useElements,
+  LinkAuthenticationElement,
 } from "@stripe/react-stripe-js";
 
 export default function CheckoutForm() {
   const stripe = useStripe();
   const elements = useElements();
 
+  const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
 
@@ -70,6 +72,7 @@ export default function CheckoutForm() {
     if (error.type === "card_error" || error.type === "validation_error") {
       setMessage(error.message);
     } else {
+      console.log(error);
       setMessage("An unexpected error occurred.");
     }
 
@@ -82,6 +85,10 @@ export default function CheckoutForm() {
 
   return (
     <form id="payment-form" onSubmit={handleSubmit}>
+      {/* <LinkAuthenticationElement
+        id="link-authentication-element"
+        onChange={(e) => setEmail(e.target.value)}
+      /> */}
       <PaymentElement id="payment-element" options={paymentElementOptions} />
       <button
         disabled={isLoading || !stripe || !elements}
