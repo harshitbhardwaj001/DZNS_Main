@@ -27,6 +27,7 @@ module.exports = {
       },
       screens: {
         xs: "450px",
+        xxl: "2500px",
       },
       colors: {
         "light-gray": "hsl(219, 4%, 32%)",
