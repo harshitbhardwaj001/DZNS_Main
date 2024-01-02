@@ -26,7 +26,7 @@ module.exports = {
         bebas: ["Bebas", "sans-serif"],
       },
       screens: {
-        xs: "450px",
+        xs: "250px",
         xxl: "2500px",
       },
       colors: {
@@ -44,12 +44,12 @@ module.exports = {
         "home-bg": "#1E1E1E",
       },
       backgroundImage: {
-        "1-bg": "url(/dzns.jpg)",
+        "1-bg": "url(/image1.jpg)",
         "2-bg": "url(/graphics1.jpg)",
         "3-bg": "url(/start.jpg)",
-        "4-bg": "url(/graphics2.jpg)",
-        "5-bg": "url(/graphics3.jpg)",
-        "6-bg": "url(/logo1.png)",
+        "4-bg": "url(/graphics2.png)",
+        "5-bg": "url(/graphics4.jpg)",
+        "6-bg": "url(/graphics5.jpg)",
         "7-bg": "url(/graphics3.jpg)",
         "8-bg": "url(/graphics3.jpg)",
         "dino-bg": "url(/trex.png)",

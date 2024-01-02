@@ -178,7 +178,7 @@ const Navbar = ({ clicked, setClicked }) => {
         <Image
           src={Logo}
           alt="Logo"
-          className="logo absolute top-0 left-0 w-[100px] p-4 m-[2em] mt-[3rem] z-[2]"
+          className="logo absolute top-0 left-0 w-[100px] p-4 m-[2em] mt-[3rem] z-[2] xs:max-md:top-[-0.5rem] xs:max-md:w-[80px]"
         ></Image>
       </a>
       <div className="btn" id="toggle-btn">
@@ -220,21 +220,25 @@ const Navbar = ({ clicked, setClicked }) => {
           <div className="menu-container">
             <div className="wrapper">
               <div className="menu-item">
-                <a href="#">Contact Us</a>
+                <a href="/contact">Contact Us</a>
                 <div className="menu-item-revealer"></div>
               </div>
               <div className="menu-item">
+                <a href="/games/dino">Time Pass</a>
+                <div className="menu-item-revealer"></div>
+              </div>
+              {/* <div className="menu-item">
                 <a href="#">Orders</a>
                 <div className="menu-item-revealer"></div>
               </div>
               <div className="menu-item">
                 <a href="#">Chat</a>
                 <div className="menu-item-revealer"></div>
-              </div>
+              </div> */}
             </div>
-            <div className="wrapper">
-              <div className="menu-item">
-                <a href="#login" onClick={handleLogin}>
+            <div className="wrapper ">
+              <div className="menu-item mt-[50px]">
+                <a href="/profile" onClick={handleLogin}>
                   {!isLoaded ? "Login/Signup" : "Dashboard"}
                 </a>
                 <div className="menu-item-revealer"></div>

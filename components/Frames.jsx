@@ -90,33 +90,33 @@ const Frames = () => {
 
       <div className="frame bg-frame-bg transform-3d">
         <div>
-          <div className="bg-3-bg frame-media frame-right left-[38rem]" />
+          <div className="bg-3-bg frame-media frame-right left-[38rem] xs:max-md:left-[18rem]" />
         </div>
         <div className="frame transform-3d" />
         <div>
-          <div className="bg-4-bg frame-media frame-left left-[-40rem]" />
+          <div className="bg-4-bg frame-media frame-left left-[-40rem] xs:max-md:left-[-18rem]" />
         </div>
       </div>
       <div className="frame transform-3d" />
 
       <div className="frame bg-frame-bg transform-3d">
         <div>
-          <div className="bg-5-bg frame-media frame-left left-[38rem]" />
+          <div className="bg-5-bg frame-media frame-left left-[38rem] xs:max-md:left-[18rem]" />
         </div>
         <div>
-          <div className="bg-6-bg frame-media frame-right left-[-40rem]" />
+          <div className="bg-6-bg frame-media frame-right left-[-40rem] xs:max-md:left-[-18rem]" />
         </div>
       </div>
 
       <div className="frame transform-3d" />
 
       <div className="frame transform-3d">
-        <div className="frame-text-left">
+        <div className="frame-text-left ">
           <h3>Video Editing</h3>
           <p>
-            DZNS helps create impactful videos, audio-visuals, motion graphics, as
-            well as 3D videos/motion flyers, VFX, and other motion pictures that
-            grasp the audience's attention. The video editing team at DZNS
+            DZNS helps create impactful videos, audio-visuals, motion graphics,
+            as well as 3D videos/motion flyers, VFX, and other motion pictures
+            that grasp the audience's attention. The video editing team at DZNS
             stives to create meaningful content that encapsulates the purpose of
             the video in striking new formats with new technologies and ideas.
           </p>
@@ -129,7 +129,7 @@ const Frames = () => {
             autoPlay
             loop
             muted
-            className="frame-video frame-video-left left-[10rem]"
+            className="frame-video frame-video-left left-[10rem] xs:max-md:left-[6rem]"
           />
         </div>
       </div>
@@ -137,11 +137,18 @@ const Frames = () => {
       <div className="frame transform-3d">
         <div className="frame bg-frame-bg transform-3d">
           <video
-            src="./video3.mp4"
+            src="./video2.mp4"
             autoPlay
             loop
             muted
-            className="frame-video frame-video-right left-[-13rem]"
+            className="frame-video frame-video-right left-[5rem] xs:max-md:left-[12rem]"
+          />
+          <video
+            src="./video4.mp4"
+            autoPlay
+            loop
+            muted
+            className="frame-video frame-video-left left-[-13rem] xs:max-md:left-[-12rem]"
           />
         </div>
       </div>
@@ -158,7 +165,7 @@ const Frames = () => {
       <div className="frame bg-frame-bg transform-3d">
         <div>
           <video
-            src="./video_optimized.mp4"
+            src="./videoend.mp4"
             autoPlay
             loop
             muted

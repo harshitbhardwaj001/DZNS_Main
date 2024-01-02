@@ -123,10 +123,12 @@ const index = () => {
                 </span>
               </div>
             )}
-            <h2 className="text-3xl w-[426px] mt-[7rem]">
-              Welcome to DZNS Studio
-            </h2>
-            <h4 className="text-xl w-[499px]">
+            <div className="flex justify-center items-center w-[100vw]">
+              <h2 className="text-3xl xs:max-md:text-2xl xs:max-md:w-[100vw] xs:max-md:ml-[1.3rem] xs:max-md:mt-[10rem] text-center w-full mt-[7rem]">
+                Welcome to DZNS Studio
+              </h2>
+            </div>
+            <h4 className="text-xl w-full xs:max-md:text-sm xs:max-md:ml-[1.3rem] text-center">
               Please complete your profile to get started
             </h4>
             <div className="flex flex-col items-center w-full gap-5">
@@ -135,10 +137,12 @@ const index = () => {
                 onMouseEnter={() => setImageHover(true)}
                 onMouseLeave={() => setImageHover(false)}
               >
-                <label className={labelClassName}>
+                <label
+                  className={`${labelClassName} w-full xs:max-md:text-sm xs:max-md:ml-[1.3rem] text-center`}
+                >
                   Select a profile picture
                 </label>
-                <div className="bg-purple-500 h-36 w-36 flex items-center justify-center rounded-full relative visible">
+                <div className="bg-purple-500 h-36 w-36 flex items-center justify-center rounded-full relative visible xs:max-md:text-sm xs:max-md:ml-[1.3rem]">
                   {image ? (
                     <Image
                       src={URL.createObjectURL(image)}
@@ -182,9 +186,12 @@ const index = () => {
                   </div>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4 w-[500px] z-[10]">
+              <div className="grid grid-cols-2 xs:max-md:grid-cols-1 xs:max-md:w-[300px] xs:max-md:ml-[1.3rem] gap-4 w-[500px] z-[10]">
                 <div>
-                  <label className={labelClassName} htmlFor="username">
+                  <label
+                    className={`${labelClassName} w-full xs:max-md:text-sm xs:max-md:ml-[4rem] text-center`}
+                    htmlFor="username"
+                  >
                     Please select a username
                   </label>
                   <input
@@ -197,7 +204,10 @@ const index = () => {
                   />
                 </div>
                 <div>
-                  <label className={labelClassName} htmlFor="fullname">
+                  <label
+                    className={`${labelClassName} w-full xs:max-md:text-sm xs:max-md:ml-[4rem] text-center`}
+                    htmlFor="fullname"
+                  >
                     Please enter your full name
                   </label>
                   <input
@@ -210,8 +220,11 @@ const index = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-col w-[500px] z-[10]">
-                <label className={labelClassName} htmlFor="description">
+              <div className="flex flex-col w-[500px] z-[10] xs:max-md:grid-cols-1 xs:max-md:w-[300px] xs:max-md:ml-[1.3rem]">
+                <label
+                  className={`${labelClassName} w-full xs:max-md:text-sm text-center`}
+                  htmlFor="description"
+                >
                   Description
                 </label>
                 <textarea
@@ -224,7 +237,7 @@ const index = () => {
                 ></textarea>
               </div>
               <button
-                className="border text-lg font-semibold px-5 py-3 z-[10] border-[#F4FF00] bg-[#F4FF00] text-black rounded-md"
+                className="border text-lg font-semibold px-5 py-3 z-[10] border-[#F4FF00] bg-[#F4FF00] xs:max-md:grid-cols-1 xs:max-md:w-[300px] xs:max-md:ml-[1.3rem] text-black rounded-md"
                 type="button"
                 onClick={setProfile}
               >

@@ -210,28 +210,11 @@
     }
   }
 
-  @media(max-width: 900px) {
-
-    .rotatethis,
-    .hero-title p,
-    .hero-gif {
-      display: none !important;
-    }
-
-    .hero-title {
-      top: 45%;
-      left: 50%;
-    }
-
-    .hero-title h1 {
-      font-size: 32px;
-    }
-  }
 
   .overlay {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: -1;
@@ -413,7 +396,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1.6em;
+    gap: 1.6rem;
   }
 
   .primary-menu a {
@@ -428,7 +411,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8em;
+    gap: 4em;
   }
 
   .secondary-menu .menu-item a {
@@ -511,5 +494,118 @@
 
   .soundbutton.paused {
     @apply opacity-25;
+  }
+}
+
+
+@media(max-width: 900px) {
+
+
+  .hero-gif {
+    width: 50vw;
+    height: 50vh;
+  }
+
+  .hero-title {
+    top: 45%;
+    left: 38%;
+  }
+
+  .hero-title h1 {
+    font-size: 32px;
+  }
+
+  .primary-menu a {
+    font-size: 60px;
+  }
+
+  .primary-menu .menu-container .wrapper {
+    justify-content: space-evenly;
+    gap: 0.1em;
+  }
+
+  .secondary-menu .menu-container .wrapper:nth-child(1) {
+    gap: 20px;
+  }
+
+  .menu>div {
+    margin-left: -5.5em;
+  }
+
+  .secondary-menu .menu-item a {
+    font-size: 20px;
+  }
+
+  .primary-menu .menu-container .wrapper .menu-item a,
+  .primary-menu .menu-container .wrapper {
+    margin-left: .6em;
+  }
+
+  .menu-container {
+    justify-content: space-around;
+  }
+}
+
+@media(max-width: 500px) {
+  .hero-gif {
+    width: 70vw;
+    height: 45vh;
+  }
+
+  .hero-title {
+    top: 45%;
+    left: 35%;
+  }
+
+  .hero-title h1 {
+    font-size: 32px;
+  }
+
+  .primary-menu a {
+    font-size: 30px;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .secondary-menu {
+    justify-content: start;
+    margin-top: -100px;
+    place-items: end;
+  }
+
+  .menu-container {
+    justify-content: space-between;
+  }
+
+  .primary-menu .menu-container .wrapper {
+    justify-content: space-evenly;
+    gap: 0.1em;
+  }
+
+  .secondary-menu .menu-container .wrapper:nth-child(1) {
+    gap: 20px;
+  }
+
+  .menu>div {
+    margin-left: -5.5em;
+  }
+
+  .secondary-menu .menu-item a {
+    font-size: 25px;
+  }
+
+  .primary-menu .menu-container .wrapper .menu-item a,
+  .primary-menu .menu-container .wrapper {
+    margin-left: 1.1em;
+  }
+
+  .menu-container {
+    justify-content: space-evenly;
+  }
+
+  .overlay {
+    width: 100vh;
   }
 }

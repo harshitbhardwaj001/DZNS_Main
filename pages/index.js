@@ -25,15 +25,15 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <main>
-        <LaunchTeaser />
+        {/* <LaunchTeaser /> */}
 
-        {/* <div className="overflow-hidden fixed h-full w-full">
+        <div className="overflow-hidden fixed h-full w-full">
           <Loader />
         </div>
 
         <div className="Nav h-full w-full invisible">
           <HeroSection />
-        </div> */}
+        </div>
       </main>
       <div className="relative z-[5]">
         <Sound />

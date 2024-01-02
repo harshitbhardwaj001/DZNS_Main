@@ -31,12 +31,12 @@ const ShopHeader = () => {
             <Image alt="hero" src={image4} fill className={`${image===4 ? "opacity-100" : "opacity-0" } transition-all duration-1000 `} />
             <Image alt="hero" src={image5} fill className={`${image===5 ? "opacity-100" : "opacity-0" } transition-all duration-1000 `} /> */}
       </div>
-      <div className="z-10 relative w-[100vw] flex justify-start top-[10rem] flex-col h-[300px] gap-5 items-center">
-        <h5 className="text-white text-center font-normal text-6xl leading-snug">
+      <div className="z-10 relative w-[100vw] flex justify-start xs:max-md:justify-center top-[10rem] flex-col h-[300px] gap-5 items-center">
+        <h5 className="text-white text-center font-normal text-6xl xs:max-md:text-2xl leading-snug">
           Find the perfect &nbsp;<i>Freelance</i> <br /> services for your
           business.
         </h5>
-        <div className="flex align-middle">
+        {/* <div className="flex align-middle">
           <div className="relative">
             <input
               type="text"
@@ -69,7 +69,7 @@ const ShopHeader = () => {
               Website Development
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );
