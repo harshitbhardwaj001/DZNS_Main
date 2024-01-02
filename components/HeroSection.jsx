@@ -30,11 +30,15 @@ export const HeroSection = () => {
           </h2>
         </div>
 
-        <div className="social-media">
+        <div className="social-media z-[20]">
           <ul>
-            <li>instagram</li>
-            <li>twitter</li>
-            <li>facebook</li>
+            <a href="https://www.instagram.com/dzns.studio/">
+              <li>instagram</li>
+            </a>
+            <a href="https://twitter.com/Dzns_Studios">
+              <li>twitter</li>
+            </a>
+            {/* <li>facebook</li> */}
           </ul>
         </div>
       </div>

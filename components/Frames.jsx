@@ -90,21 +90,21 @@ const Frames = () => {
 
       <div className="frame bg-frame-bg transform-3d">
         <div>
-          <div className="bg-3-bg frame-media frame-right left-[38rem] xs:max-md:left-[25rem]" />
+          <div className="bg-3-bg frame-media frame-right left-[38rem] xs:max-md:left-[18rem] 2xl:left-[68rem]" />
         </div>
         <div className="frame transform-3d" />
         <div>
-          <div className="bg-4-bg frame-media frame-left left-[-40rem] xs:max-md:left-[-25rem]" />
+          <div className="bg-4-bg frame-media frame-left left-[-40rem] xs:max-md:left-[-18rem] 2xl:left-[-68rem]" />
         </div>
       </div>
       <div className="frame transform-3d" />
 
       <div className="frame bg-frame-bg transform-3d">
         <div>
-          <div className="bg-5-bg frame-media frame-left left-[38rem] xs:max-md:left-[25rem]" />
+          <div className="bg-5-bg frame-media frame-left left-[38rem] xs:max-md:left-[18rem] 2xl:left-[68rem]" />
         </div>
         <div>
-          <div className="bg-6-bg frame-media frame-right left-[-40rem] xs:max-md:left-[-25rem]" />
+          <div className="bg-6-bg frame-media frame-right left-[-40rem] xs:max-md:left-[-18rem] 2xl:left-[-68rem]" />
         </div>
       </div>
 
