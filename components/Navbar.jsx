@@ -223,10 +223,10 @@ const Navbar = ({ clicked, setClicked }) => {
                 <a href="/contact">Contact Us</a>
                 <div className="menu-item-revealer"></div>
               </div>
-              <div className="menu-item">
+              {/* <div className="menu-item">
                 <a href="/games/dino">Time Pass</a>
                 <div className="menu-item-revealer"></div>
-              </div>
+              </div> */}
               {/* <div className="menu-item">
                 <a href="#">Orders</a>
                 <div className="menu-item-revealer"></div>
