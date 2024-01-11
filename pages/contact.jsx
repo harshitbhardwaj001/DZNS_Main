@@ -34,16 +34,16 @@ const contact = () => {
       </div>
       <div className={`${clicked ? "hidden" : "block"}`}>
         <div className="min-h-[80vh] relative my-10 mt-[-1.25rem] top-[6rem] px-32">
-          <div class="flex items-center justify-center p-12">
-            <div class="mx-auto w-full max-w-[550px] xs:max-md:ml-[-8rem]">
+          <div className="flex items-center justify-center p-12">
+            <div className="mx-auto w-full max-w-[550px] xs:max-md:ml-[-8rem]">
               <h1 className="w-full text-center text-[3rem] mb-[3rem] font-semibold xs:max-md:text-[2rem]">
                 Contact Us
               </h1>
               <form action="https://formbold.com/s/FORM_ID" ref={form}>
-                <div class="mb-5">
+                <div className="mb-5">
                   <label
                     for="name"
-                    class="mb-3 block text-base font-medium text-[#fff]"
+                    className="mb-3 block text-base font-medium text-[#fff]"
                   >
                     Full Name
                   </label>
@@ -52,13 +52,13 @@ const contact = () => {
                     name="name"
                     id="name"
                     placeholder="Full Name"
-                    class="w-full rounded-md border border-[#e0e0e0] bg-[#30313D] py-3 px-6 text-base font-medium text-[#F4FF00] outline-none focus:border-[#000] focus:shadow-md xs:max-md:w-[200px]"
+                    className="w-full rounded-md border border-[#e0e0e0] bg-[#30313D] py-3 px-6 text-base font-medium text-[#F4FF00] outline-none focus:border-[#000] focus:shadow-md xs:max-md:w-[200px]"
                   />
                 </div>
-                <div class="mb-5">
+                <div className="mb-5">
                   <label
                     for="email"
-                    class="mb-3 block text-base font-medium text-[#fff]"
+                    className="mb-3 block text-base font-medium text-[#fff]"
                   >
                     Email Address
                   </label>
@@ -67,13 +67,13 @@ const contact = () => {
                     name="email"
                     id="email"
                     placeholder="example@domain.com"
-                    class="w-full rounded-md border border-[#e0e0e0] bg-[#30313D] py-3 px-6 text-base font-medium text-[#F4FF00] outline-none focus:border-[#000] focus:shadow-md xs:max-md:w-[200px]"
+                    className="w-full rounded-md border border-[#e0e0e0] bg-[#30313D] py-3 px-6 text-base font-medium text-[#F4FF00] outline-none focus:border-[#000] focus:shadow-md xs:max-md:w-[200px]"
                   />
                 </div>
-                <div class="mb-5">
+                <div className="mb-5">
                   <label
                     for="subject"
-                    class="mb-3 block text-base font-medium text-[#fff]"
+                    className="mb-3 block text-base font-medium text-[#fff]"
                   >
                     Subject
                   </label>
@@ -82,13 +82,13 @@ const contact = () => {
                     name="subject"
                     id="subject"
                     placeholder="Enter your subject"
-                    class="w-full rounded-md border border-[#e0e0e0] bg-[#30313D] py-3 px-6 text-base font-medium text-[#F4FF00] outline-none focus:border-[#000] focus:shadow-md xs:max-md:w-[200px]"
+                    className="w-full rounded-md border border-[#e0e0e0] bg-[#30313D] py-3 px-6 text-base font-medium text-[#F4FF00] outline-none focus:border-[#000] focus:shadow-md xs:max-md:w-[200px]"
                   />
                 </div>
-                <div class="mb-5">
+                <div className="mb-5">
                   <label
                     for="message"
-                    class="mb-3 block text-base font-medium text-[#fff]"
+                    className="mb-3 block text-base font-medium text-[#fff]"
                   >
                     Message
                   </label>
@@ -97,12 +97,12 @@ const contact = () => {
                     name="message"
                     id="message"
                     placeholder="Type your message"
-                    class="w-full resize-none rounded-md border border-[#e0e0e0] bg-[#30313D] py-3 px-6 text-base font-medium text-[#F4FF00] outline-none focus:border-[#000] focus:shadow-md xs:max-md:w-[200px]"
+                    className="w-full resize-none rounded-md border border-[#e0e0e0] bg-[#30313D] py-3 px-6 text-base font-medium text-[#F4FF00] outline-none focus:border-[#000] focus:shadow-md xs:max-md:w-[200px]"
                   ></textarea>
                 </div>
                 <div>
                   <button
-                    class="border items-center border-[#F4FF00] bg-[#F4FF00] px-5 text-black py-3 font-bold text-lg mt-5 rounded-md w-full xs:max-md:w-[200px]"
+                    className="border items-center border-[#F4FF00] bg-[#F4FF00] px-5 text-black py-3 font-bold text-lg mt-5 rounded-md w-full xs:max-md:w-[200px]"
                     onClick={sendEmail}
                   >
                     Submit

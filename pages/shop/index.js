@@ -11,7 +11,7 @@ const index = () => {
       <Head>
         <title>Shop | Undiscovered</title>
       </Head>
-      <div className="nav overflow-hidden z-[5] fixed h-full w-full">
+      <div className="nav overflow-hidden z-[5]">
         <Navbar clicked={clicked} setClicked={setClicked} />
       </div>
       <div className={`${clicked ? "hidden" : "block"}`}>

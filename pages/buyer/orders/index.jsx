@@ -37,7 +37,7 @@ function index() {
         <Navbar clicked={clicked} setClicked={setClicked} />
       </div>
       <div className={`${clicked ? "hidden" : "block"}`}>
-        <div className="min-h-[80vh] relative my-10 mt-[-1.25rem] top-[10rem] px-32">
+        <div className="min-h-[80vh] relative my-10 mt-[-1.25rem] top-[10rem] px-32 xs:max-md:px-5">
           <h3 className="m-5 text-2xl font-semibold w-full">All your Orders</h3>
 
           <div className="relative overflow-x-auto shadow-md sm:rounded-lg">

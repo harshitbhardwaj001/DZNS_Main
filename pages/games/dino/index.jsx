@@ -11,7 +11,7 @@ const index = () => {
       </div>
       <div className={`${clicked ? "hidden" : "block"}`}>
         <Dino />
-        <footer className="flex justify-center mt-[13rem]">
+        <footer className="flex justify-center mt-[13rem] xs:max-md:mt-[30rem] xs:max-md:mb-[2rem] xs:max-md:ml-[10rem]">
           <div>&copy;{new Date().getFullYear()} DZNS Studio</div>
         </footer>
       </div>

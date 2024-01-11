@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(173, 173, 173);
+}
+
 @layer base {
   :root {
     --index: calc(1vw + 1vh);
@@ -16,6 +28,11 @@
     --transition-ease: ease;
     --link-color: #e2e2dc;
     --overlay-bg: #0a0a0a;
+    --rotate: 4;
+  }
+
+  html {
+    @apply scroll-smooth;
   }
 
   body {
@@ -51,6 +68,15 @@
     z-index: -3;
   }
 
+  .gif-overlay1 {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 418vh;
+    background-color: #1e1e1e;
+    z-index: -3;
+  }
+
   .hero-gif {
     position: absolute;
     top: 50%;
@@ -61,7 +87,7 @@
     background: url(/home.gif) no-repeat 50% 50%;
     background-size: cover;
     animation: animateGIF 4s cubic-bezier(0, .58, 1, .58);
-    animation-delay: 6.5s;
+    /* animation-delay: 3.5s; */
   }
 
   @keyframes animateGIF {
@@ -94,6 +120,10 @@
     font-size: 80px;
     font-weight: 200;
     margin-bottom: 0%;
+  }
+
+  .about {
+    font-family: "Raleway";
   }
 
   .glitch {
@@ -194,10 +224,331 @@
 
   .rotatethis {
     position: absolute;
-    top: 54%;
-    left: 74%;
-    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    top: 55%;
+    left: 65%;
+    transform: rotate(-80deg);
+    font-size: 16px;
+    font-family: "Raleway";
     animation: rotating 20s linear infinite;
+  }
+
+  #steps {
+    position: relative;
+    gap: 10vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 150vh;
+    /* background-color: #1e1e1e; */
+  }
+
+  .textSteps {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .cards {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    box-shadow: 0 6px 10px 3px rgba(0, 0, 0, 0.2),
+      10px 10px 25px 0 rgba(0, 0, 0, 0.19);
+    height: 80vh;
+  }
+
+  #card-one {
+    top: 130%;
+    background-image: url(/Artboard1.png);
+    background-position: top;
+    background-size: cover;
+  }
+
+  #card-two {
+    top: 230%;
+    background-image: url(/Artboard2.png);
+    background-position: top;
+    background-size: cover;
+  }
+
+  #card-three {
+    top: 250%;
+    background-image: url(/Artboard1.png);
+    background-position: top;
+    background-size: cover;
+  }
+
+  #card-four {
+    top: 270%;
+    background-image: url(/Artboard2.png);
+    background-position: top;
+    background-size: cover;
+  }
+
+  #card-five {
+    top: 290%;
+    background-image: url(/Artboard1.png);
+    background-position: top;
+    background-size: cover;
+  }
+
+  #card-six {
+    top: 310%;
+    background-image: url(/Artboard2.png);
+    background-position: top;
+    background-size: cover;
+  }
+
+  #card-seven {
+    top: 330%;
+    background-image: url(/Artboard1.png);
+    background-position: top;
+    background-size: cover;
+  }
+
+  #card-eight {
+    top: 350%;
+    background-image: url(/Artboard2.png);
+    background-position: top;
+    background-size: cover;
+  }
+
+  .rotatethis span {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 15px);
+    display: inline-block;
+    width: 30px;
+    height: 100px;
+    transform-origin: center bottom;
+
+  }
+
+  .rotatethis span:nth-child(1) {
+    transform: rotate(0deg);
+  }
+
+  .rotatethis span:nth-child(2) {
+    transform: rotate(6.6667deg);
+  }
+
+  .rotatethis span:nth-child(3) {
+    transform: rotate(13.3333deg);
+  }
+
+  .rotatethis span:nth-child(4) {
+    transform: rotate(20deg);
+  }
+
+  .rotatethis span:nth-child(5) {
+    transform: rotate(26.6667deg);
+  }
+
+  .rotatethis span:nth-child(6) {
+    transform: rotate(33.3333deg);
+  }
+
+  .rotatethis span:nth-child(7) {
+    transform: rotate(40deg);
+  }
+
+  .rotatethis span:nth-child(8) {
+    transform: rotate(46.6667deg);
+  }
+
+  .rotatethis span:nth-child(9) {
+    transform: rotate(53.3333deg);
+  }
+
+  .rotatethis span:nth-child(10) {
+    transform: rotate(60deg);
+  }
+
+  .rotatethis span:nth-child(11) {
+    transform: rotate(66.6667deg);
+  }
+
+  .rotatethis span:nth-child(12) {
+    transform: rotate(73.3333deg);
+  }
+
+  .rotatethis span:nth-child(13) {
+    transform: rotate(80deg);
+  }
+
+  .rotatethis span:nth-child(14) {
+    transform: rotate(86.6667deg);
+  }
+
+  .rotatethis span:nth-child(15) {
+    transform: rotate(93.3333deg);
+  }
+
+  .rotatethis span:nth-child(16) {
+    transform: rotate(100deg);
+  }
+
+  .rotatethis span:nth-child(17) {
+    transform: rotate(106.667deg);
+  }
+
+  .rotatethis span:nth-child(18) {
+    transform: rotate(113.333deg);
+  }
+
+  .rotatethis span:nth-child(19) {
+    transform: rotate(120deg);
+  }
+
+  .rotatethis span:nth-child(20) {
+    transform: rotate(126.667deg);
+  }
+
+  .rotatethis span:nth-child(21) {
+    transform: rotate(133.333deg);
+  }
+
+  .rotatethis span:nth-child(22) {
+    transform: rotate(140deg);
+  }
+
+  .rotatethis span:nth-child(23) {
+    transform: rotate(146.667deg);
+  }
+
+  .rotatethis span:nth-child(24) {
+    transform: rotate(153.333deg);
+  }
+
+  .rotatethis span:nth-child(25) {
+    transform: rotate(160deg);
+  }
+
+  .rotatethis span:nth-child(26) {
+    transform: rotate(166.667deg);
+  }
+
+  .rotatethis span:nth-child(27) {
+    transform: rotate(173.333deg);
+  }
+
+  .rotatethis span:nth-child(28) {
+    transform: rotate(180deg);
+  }
+
+  .rotatethis span:nth-child(29) {
+    transform: rotate(186.667deg);
+  }
+
+  .rotatethis span:nth-child(30) {
+    transform: rotate(193.333deg);
+  }
+
+  .rotatethis span:nth-child(31) {
+    transform: rotate(200deg);
+  }
+
+  .rotatethis span:nth-child(32) {
+    transform: rotate(206.667deg);
+  }
+
+  .rotatethis span:nth-child(33) {
+    transform: rotate(213.333deg);
+  }
+
+  .rotatethis span:nth-child(34) {
+    transform: rotate(220deg);
+  }
+
+  .rotatethis span:nth-child(35) {
+    transform: rotate(226.667deg);
+  }
+
+  .rotatethis span:nth-child(36) {
+    transform: rotate(233.333deg);
+  }
+
+  .rotatethis span:nth-child(37) {
+    transform: rotate(240deg);
+  }
+
+  .rotatethis span:nth-child(38) {
+    transform: rotate(246.667deg);
+  }
+
+  .rotatethis span:nth-child(39) {
+    transform: rotate(253.333deg);
+  }
+
+  .rotatethis span:nth-child(40) {
+    transform: rotate(260deg);
+  }
+
+  .rotatethis span:nth-child(41) {
+    transform: rotate(266.667deg);
+  }
+
+  .rotatethis span:nth-child(42) {
+    transform: rotate(273.333deg);
+  }
+
+  .rotatethis span:nth-child(43) {
+    transform: rotate(280deg);
+  }
+
+  .rotatethis span:nth-child(44) {
+    transform: rotate(286.667deg);
+  }
+
+  .rotatethis span:nth-child(45) {
+    transform: rotate(293.333deg);
+  }
+
+  .rotatethis span:nth-child(46) {
+    transform: rotate(300deg);
+  }
+
+  .rotatethis span:nth-child(47) {
+    transform: rotate(306.667deg);
+  }
+
+  .rotatethis span:nth-child(48) {
+    transform: rotate(313.333deg);
+  }
+
+  .rotatethis span:nth-child(49) {
+    transform: rotate(320deg);
+  }
+
+  .rotatethis span:nth-child(50) {
+    transform: rotate(326.667deg);
+  }
+
+  .rotatethis span:nth-child(51) {
+    transform: rotate(333.333deg);
+  }
+
+  .rotatethis span:nth-child(52) {
+    transform: rotate(340deg);
+  }
+
+  .rotatethis span:nth-child(53) {
+    transform: rotate(346.667deg);
+  }
+
+  .rotatethis span:nth-child(54) {
+    transform: rotate(353.333deg);
   }
 
   @keyframes rotating {
@@ -274,7 +625,11 @@
   }
 
   .jump {
-    animation: jump 0.3s linear;
+    animation: jump 0.6s linear;
+  }
+
+  .jump1 {
+    animation: jump1 0.6s linear;
   }
 
   .cactus {
@@ -298,7 +653,7 @@
     }
 
     30% {
-      top: 230px;
+      top: 225px;
     }
 
     50% {
@@ -306,11 +661,33 @@
     }
 
     80% {
-      top: 230px;
+      top: 225px;
     }
 
     100% {
       top: 330px;
+    }
+  }
+
+  @keyframes jump1 {
+    0% {
+      top: 270px;
+    }
+
+    30% {
+      top: 170px;
+    }
+
+    50% {
+      top: 100px;
+    }
+
+    80% {
+      top: 170px;
+    }
+
+    100% {
+      top: 270px;
     }
   }
 
@@ -550,11 +927,42 @@
   .hero-gif {
     width: 70vw;
     height: 45vh;
+    animation: animateGIFSmall 4s cubic-bezier(0, .58, 1, .58);
+    /* animation-delay: 6.5s; */
+  }
+
+  @keyframes animateGIFSmall {
+    0% {
+      width: 100%;
+      height: 100vh;
+    }
+
+    40% {
+      width: 100%;
+      height: 100vh;
+    }
+
+    100% {
+      width: 75vw;
+      height: 45vh;
+    }
+  }
+
+  .rotatethis {
+    font-size: 10px;
+    width: 100px;
+    height: 100px;
+    left: 16rem;
+    top: 26.5rem;
+  }
+
+  .rotatethis span {
+    height: 50px;
   }
 
   .hero-title {
-    top: 45%;
-    left: 35%;
+    top: 35%;
+    left: 38%;
   }
 
   .hero-title h1 {
@@ -606,6 +1014,7 @@
   }
 
   .overlay {
-    width: 100vh;
+    width: 100vw;
+    overflow: hidden;
   }
 }

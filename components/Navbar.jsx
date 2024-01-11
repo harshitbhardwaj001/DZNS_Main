@@ -186,7 +186,7 @@ const Navbar = ({ clicked, setClicked }) => {
           <span></span>
         </div>
       </div>
-      <div className="overlay">
+      <div className={`overlay ${!clicked ? "w-[99vw] h-[100vh]" : ""}`}>
         <svg viewBox="0 0 1000 1000" className="animate w-full" fill="#fff">
           <path d="M0 2S715 1 500 1s500 1 500 1V0H0Z"></path>
         </svg>
@@ -223,26 +223,44 @@ const Navbar = ({ clicked, setClicked }) => {
                 <a href="/contact">Contact Us</a>
                 <div className="menu-item-revealer"></div>
               </div>
-              {/* <div className="menu-item">
+              <div className="menu-item">
                 <a href="/games/dino">Time Pass</a>
-                <div className="menu-item-revealer"></div>
-              </div> */}
-              {/* <div className="menu-item">
-                <a href="#">Orders</a>
                 <div className="menu-item-revealer"></div>
               </div>
               <div className="menu-item">
+                {userInfo === undefined ? (
+                  <a href="#login" onClick={handleLogin}>
+                    Orders
+                  </a>
+                ) : (
+                  <a
+                    href={`${
+                      userInfo?.isDesigner ? "/seller/orders" : "/buyer/orders"
+                    }`}
+                  >
+                    Orders
+                  </a>
+                )}
+                <div className="menu-item-revealer"></div>
+              </div>
+              {/* <div className="menu-item">
                 <a href="#">Chat</a>
                 <div className="menu-item-revealer"></div>
               </div> */}
             </div>
             <div className="wrapper ">
               <div className="menu-item mt-[50px]">
-                <a href="/profile" onClick={handleLogin}>
-                  {!isLoaded ? "Login/Signup" : "Dashboard"}
-                </a>
-                <div className="menu-item-revealer"></div>
+                {userInfo === undefined ? (
+                  <a href="#login" onClick={handleLogin}>
+                    Login/Signup
+                  </a>
+                ) : (
+                  <a href={`${userInfo?.isDesigner ? "/seller" : "/profile"}`}>
+                    Dashboard
+                  </a>
+                )}
               </div>
+              <div className="menu-item-revealer"></div>
             </div>
           </div>
         </div>

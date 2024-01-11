@@ -185,3 +185,37 @@ const createSearchQuery = (searchTerm, category) => {
   }
   return query;
 };
+
+// export const checkServiceOrder = async (req, res, next) => {
+//   try {
+//     if (req.userId && req.params.serviceId) {
+//       const hasUserOrderedGig = await checkOrder(
+//         req.userId,
+//         req.params.serviceId
+//       );
+//       return res
+//         .status(200)
+//         .json({ hasUserOrderedGig: hasUserOrderedGig ? true : false });
+//     }
+//     return res.status(400).send("userId and serviceId is required.");
+//   } catch (err) {
+//     console.log(err);
+//     return res.status(500).send("Internal Server Error.");
+//   }
+// };
+
+// const checkOrder = async (userId, serviceId) => {
+//   try {
+//     const prisma = new PrismaClient();
+//     const hasUserOrderedGig = await prisma.orders.findFirst({
+//       where: {
+//         buyerId: parseInt(userId),
+//         serviceId: parseInt(serviceId),
+//         isCompleted: true,
+//       },
+//     });
+//     return hasUserOrderedGig;
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };

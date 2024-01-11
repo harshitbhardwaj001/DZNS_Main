@@ -11,31 +11,38 @@ const Pricing = () => {
   return (
     <>
       {serviceData && (
-        <div className="z-[10] sticky top-36 mb-10 h-max w-96">
+        <div className="z-[10] sticky top-36 mb-10 h-max w-96 xs:max-md:w-[19.3rem]">
           <div className="border p-10 flex flex-col gap-5">
             <div className="flex justify-between">
-              <h4 className="text-md font-normal text-[#fff] w-full">
+              <h4 className="text-sm font-normal text-[#fff] w-full xs:max-md:text-center">
                 {serviceData.shortDesc}
               </h4>
-              <h6 className="font-medium text-lg">
-                &#8377;{serviceData.price}
-              </h6>
             </div>
+            <h6 className="font-medium text-xl xs:max-md:text-center">
+              &#8377;500
+            </h6>
             <div>
               <div className="text-[#fff] font-semibold text-sm flex gap-6">
                 <div className="flex items-center gap-2">
-                  <FiClock className="text-xl" />
-                  <span>{serviceData.deliveryTime} Days Delivery</span>
+                  <FiClock className="text-xl xs:max-md:text-[0.8rem]" />
+                  <span className="xs:max-md:w-[98px] xs:max-md:text-[0.7rem]">
+                    {serviceData.deliveryTime} Days Delivery
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <FiRefreshCcw className="text-xl" />
-                  <span>{serviceData.revisions} Revisions</span>
+                  <FiRefreshCcw className="text-xl xs:max-md:text-[0.8rem]" />
+                  <span className="xs:max-md:w-[98px] xs:max-md:text-[0.7rem]">
+                    {serviceData.revisions} Revisions
+                  </span>
                 </div>
               </div>
             </div>
             <ul>
               {serviceData.features.map((feature) => (
-                <li key={feature} className="flex items-center gap-3">
+                <li
+                  key={feature}
+                  className="flex items-center gap-3"
+                >
                   <BsCheckLg className="text-[#F4FF00] text-lg" />
                   <span className="text-[#fff]">{feature}</span>
                 </li>

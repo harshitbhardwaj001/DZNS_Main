@@ -17,7 +17,7 @@ const Details = () => {
     <>
       {serviceData && currentImage !== "" && (
         <div className="col-span-2 flex flex-col gap-3">
-          <h3 className="text-2xl font-bold text-[#fff] w-full">
+          <h3 className="text-2xl font-bold text-[#fff] w-full xs:max-md:text-center">
             {serviceData.title}
           </h3>
           <div className="flex items-center gap-2">
@@ -47,7 +47,7 @@ const Details = () => {
               </h6>
             </div> */}
             <div className="flex items-center gap-1 mb-4 mt-[-8px]">
-              <div className="flex">
+              <div className="flex xs:max-md:hidden">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <FaStar key={star} className={`cursor-pointer `} />
                 ))}
@@ -61,10 +61,10 @@ const Details = () => {
                 alt="Service"
                 width={1000}
                 height={500}
-                className="hover:scale-110 transition-all duration-500 w-[1000px] h-[500px]"
+                className="hover:scale-110 transition-all duration-500 w-[1000px] h-[500px] xs:max-md:w-[500px] xs:max-md:h-[200px]"
               />
             </div>
-            <div className="flex gap-4 flex-wrap z-[10]">
+            <div className="flex gap-4 flex-wrap z-[10] xs:max-md:justify-center">
               {serviceData.images.length > 1 &&
                 serviceData.images.map((image) => (
                   <Image
@@ -76,17 +76,19 @@ const Details = () => {
                     onClick={() => setCurrentImage(image)}
                     className={`${
                       currentImage === image ? "" : "blur-sm"
-                    } cursor-pointer transition-all duration-500`}
+                    } cursor-pointer transition-all duration-500 w-[100px] xs:max-md:w-[50px]`}
                   />
                 ))}
             </div>
           </div>
           <div>
-            <h3 className="text-3xl my-5 font-medium text-[#fff] w-full">
+            <h3 className="text-3xl my-5 font-medium text-[#fff] w-full xs:max-md:text-center">
               About this service
             </h3>
             <div>
-              <p className="w-full">{serviceData.description}</p>
+              <p className="w-full xs:max-md:text-center">
+                {serviceData.description}
+              </p>
             </div>
           </div>
           <div></div>

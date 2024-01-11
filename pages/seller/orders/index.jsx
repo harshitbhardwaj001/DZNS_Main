@@ -3,7 +3,7 @@ import Navbar from "../../../components/Navbar";
 import { useCookies } from "react-cookie";
 import { useStateProvider } from "../../../context/StateContext";
 import axios from "axios";
-import { GET_BUYER_ORDERS_ROUTE } from "../../../utils/constants";
+import { GET_SELLER_ORDERS_ROUTE } from "../../../utils/constants";
 import Link from "next/link";
 
 function index() {
@@ -15,7 +15,7 @@ function index() {
   useEffect(() => {
     const getOrders = async () => {
       try {
-        const { data } = await axios.get(GET_BUYER_ORDERS_ROUTE, {
+        const { data } = await axios.get(GET_SELLER_ORDERS_ROUTE, {
           headers: {
             Authorization: `Bearer ${cookies.jwt}`,
           },
@@ -37,7 +37,7 @@ function index() {
         <Navbar clicked={clicked} setClicked={setClicked} />
       </div>
       <div className={`${clicked ? "hidden" : "block"}`}>
-        <div className="min-h-[80vh] relative my-10 mt-[-1.25rem] top-[10rem] px-32">
+        <div className="min-h-[80vh] relative my-10 mt-[-1.25rem] top-[10rem] px-32 xs:max-md:px-5">
           <h3 className="m-5 text-2xl font-semibold w-full">All your Orders</h3>
 
           <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -91,7 +91,7 @@ function index() {
                       </td>
                       <td className="px-6 py-4">
                         <Link
-                          href={`/buyer/orders/messages/${order.id}`}
+                          href={`/seller/orders/messages/${order.id}`}
                           className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                         >
                           Send Message

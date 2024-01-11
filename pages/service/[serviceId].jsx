@@ -4,7 +4,10 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useStateProvider } from "../../context/StateContext";
 import axios from "axios";
-import { GET_SERVICE_DATA } from "../../utils/constants";
+import {
+  CHECK_USER_ORDERED_SERVICE_ROUTE,
+  GET_SERVICE_DATA,
+} from "../../utils/constants";
 import Details from "../../components/services/Details";
 import Pricing from "../../components/services/Pricing";
 import { reducerCases } from "../../context/constants";
@@ -30,6 +33,23 @@ const ServicesPage = () => {
     if (serviceId) fetchServiceDdata();
   }, [serviceId, dispatch]);
 
+  useEffect(() => {
+    const checkServiceOrdered = async () => {
+      const {
+        data: { hasUserOrderedService },
+      } = await axios.get(`${CHECK_USER_ORDERED_SERVICE_ROUTE}/${serviceId}`, {
+        withCredentials: true,
+      });
+      dispatch({
+        type: reducerCases.HAS_USER_ORDERED_SERVICE,
+        hasOrdered: hasUserOrderedService,
+      });
+    };
+    if (userInfo) {
+      checkServiceOrdered();
+    }
+  }, [dispatch, serviceId, userInfo]);
+
   return (
     <>
       <Head>
@@ -39,7 +59,7 @@ const ServicesPage = () => {
         <Navbar clicked={clicked} setClicked={setClicked} />
       </div>
       <div className={`${clicked ? "hidden" : "block"}`}>
-        <div className="min-h-[80vh] relative top-[10rem] grid grid-cols-3 mx-32 gap-20">
+        <div className="min-h-[80vh] relative top-[10rem] grid grid-cols-3 xs:max-md:grid-cols-1 xs:max-md:mx-8 mx-32 gap-20">
           <Details />
           <Pricing />
         </div>

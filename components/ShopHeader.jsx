@@ -36,18 +36,18 @@ const ShopHeader = () => {
           Find the perfect &nbsp;<i>Freelance</i> <br /> services for your
           business.
         </h5>
-        {/* <div className="flex align-middle">
+        <div className="flex align-middle">
           <div className="relative">
             <input
               type="text"
-              className="h-14 w-[600px] text-black pl-10 rounded-md rounded-r-none"
+              className="h-14 w-[600px] text-black pl-10 rounded-md rounded-r-none xs:max-md:w-[200px] xs:max-md:h-12 xs:max-md:text-[0.8rem]  xs:max-md:pl-4"
               value={searchData}
               onChange={(e) => setSearchData(e.target.value)}
               placeholder={'Try "building website"'}
             />
           </div>
           <button
-            className="bg-[#F4FF00] text-black px-12 text-lg font-semibold rounded-r-md"
+            className="bg-[#F4FF00] text-black px-12 text-lg font-semibold rounded-r-md xs:max-md:px-5"
             onClick={() => {
               setSearchData("");
               router.push(`/search?q=${searchData}`);
@@ -56,9 +56,9 @@ const ShopHeader = () => {
             Search
           </button>
         </div>
-        <div className="text-white flex gap-4">
+        <div className="text-white flex gap-4  xs:max-md:gap-2">
           Popular:{" "}
-          <ul className="flex gap-5">
+          <ul className="flex gap-5  xs:max-md:gap-0">
             <li className="text-md py-[0.5px] px-2 rounded-full hover:bg-white hover:text-black transition-all duration-300">
               Design Consultation
             </li>
@@ -69,7 +69,7 @@ const ShopHeader = () => {
               Website Development
             </li>
           </ul>
-        </div> */}
+        </div>
       </div>
     </div>
   );

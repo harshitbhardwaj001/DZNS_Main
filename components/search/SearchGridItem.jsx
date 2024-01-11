@@ -45,15 +45,19 @@ const SearchGridItem = ({ service }) => {
         </span>
       </div> */}
       <div>
-        <p className="line-clamp-2 text-2xl text-[#fff]">{service.title}</p>
+        <p className="line-clamp-2 text-2xl text-[#fff] xs:max-md:text-center xs:max-md:w-[250px] xs:max-md:text-lg">
+          {service.title}
+        </p>
       </div>
-      <div className="flex items-center gap-1 mt-[-8px] text-yellow-400">
+      {/* <div className="flex items-center gap-1 mt-[-8px] text-yellow-400">
         <FaStar size={15} />
         <span className="font-medium">{calculateratings()}</span>
         <span className="text-[#74767e]">{service?.reviews?.length}</span>
-      </div>
-      <div>
-        <strong className="font-medium">From &#8377;{service.price}</strong>
+      </div> */}
+      <div className="xs:max-md:flex xs:max-md:mt-[-0.5rem]">
+        <strong className="font-medium xs:max-md:text-center xs:max-md:w-[250px]">
+          From &#8377;{service.price}
+        </strong>
       </div>
     </div>
   );

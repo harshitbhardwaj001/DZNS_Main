@@ -29,13 +29,13 @@ const search = () => {
 
   return (
     <>
-      <div className="nav overflow-hidden z-[5] fixed h-full w-full">
+      <div className="nav overflow-hidden z-[5] h-full w-full">
         <Navbar clicked={clicked} setClicked={setClicked} />
       </div>
       <div className={`${clicked ? "hidden" : "block"}`}>
-        <div className="mx-24 mb-24 min-h-[80vh] relative top-[10rem]">
+        <div className="mx-24 mb-24 min-h-[80vh] relative top-[10rem] xs:max-md:mx-[3.5rem]">
           {q && (
-            <h3 className="text-4xl mb-10 w-full">
+            <h3 className="text-4xl mb-10 w-full text-white">
               Results for <strong>{q}</strong>
             </h3>
           )}
@@ -51,19 +51,19 @@ const search = () => {
             </button>
           </div>
           <div>
-            <div className="my-4">
+            <div className="my-4 xs:max-md:mx-[6rem] xs:max-md:w-[100px]">
               <span className="text-[#74767e] font-medium">
                 {services.length} Services Available
               </span>
             </div>
-            <div className="grid grid-cols-4">
+            <div className="grid grid-cols-4 xs:max-md:grid-cols-1">
               {services.map((service) => (
                 <SearchGridItem service={service} key={service.id} />
               ))}
             </div>
           </div>
         </div>
-        <footer className="flex justify-center my-7 mt-[5rem]">
+        <footer className="flex justify-center my-7 mt-[10rem]">
           <div>&copy;{new Date().getFullYear()} DZNS Studio</div>
         </footer>
       </div>

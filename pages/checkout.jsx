@@ -57,7 +57,7 @@ const checkout = () => {
       </div>
       <div className={`${clicked ? "hidden" : "block"}`}>
         <div className="min-h-[80vh] max-w-full relative top-[10rem] flex flex-col items-center mx-20 gap-10">
-          <h1 className="text-3xl w-full text-center">
+          <h1 className="text-3xl w-full text-center xs:max-md:text-xl">
             Please complete the payment to place the order
           </h1>
           {clientSecret && (

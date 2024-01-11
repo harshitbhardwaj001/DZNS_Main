@@ -23,3 +23,8 @@ servicesRoutes.put(
   editService
 );
 servicesRoutes.get("/search-services", searchServices);
+// servicesRoutes.get(
+//   "/check-service-order/:serviceId",
+//   verifyToken,
+//   checkServiceOrder
+// );
