@@ -2,14 +2,6 @@
     "version": 2,
     "builds": [
         {
-            "src": "pages/**",
-            "use": "@vercel/static"
-        },
-        {
-            "src": "components/**",
-            "use": "@vercel/static"
-        },
-        {
             "src": "server/**",
             "use": "@vercel/node"
         }
