@@ -9,6 +9,9 @@ module.exports = withTM({
   //     : "http://localhost:9001",
   // },
   images: {
+    protocol: "https",
     domains: isProduction ? ["**"] : ["localhost"],
+    port: "",
+    pathname: "**",
   },
 });
