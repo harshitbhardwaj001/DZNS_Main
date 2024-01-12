@@ -82,7 +82,7 @@ export const getUserInfo = async (req, res, next) => {
     }
   } catch (err) {
     console.log(err);
-    return res.status(500).send("Internal Srver Error.");
+    return res.status(500).send("Internal Server Error.");
   }
 };
 
