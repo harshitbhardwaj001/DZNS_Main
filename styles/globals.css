@@ -37,6 +37,7 @@
 
   body {
     @apply font-raleway font-light bg-[#191919] text-white text-[calc(var(--index)*.8)] leading-[1.75] select-none;
+    overflow-x: hidden;
   }
 
   h1,

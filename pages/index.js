@@ -65,9 +65,9 @@ export default function Home() {
             <div className={`${clicked ? "hidden" : "block"}`}>
               <HeroSection />
               <div id="bgChange">
-                <About />
+                {/* <About /> */}
                 {/* <div className="absolute top-[100vh] z-[0] gif-overlay1"></div> */}
-                <div className="hidden xs:max-md:block">
+                {/* <div className="hidden xs:max-md:block">
                   <Flowchart />
                 </div>
                 <div className="xs:max-md:hidden">
@@ -77,7 +77,7 @@ export default function Home() {
                   <div className="z-[20]">
                     &copy;{new Date().getFullYear()} DZNS Studio
                   </div>
-                </footer>
+                </footer> */}
               </div>
             </div>
             <div className="relative z-[5]">

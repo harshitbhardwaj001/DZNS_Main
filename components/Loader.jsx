@@ -8,7 +8,7 @@ const Loader = () => {
       defaults: { ease: "power4.out", duration: 0.7 },
     });
     const paths = document.querySelectorAll("#Dots .cls-1");
-    
+
     gsap.to("g", { autoAlpha: 1 });
 
     gsap.to("svg", {
@@ -17,17 +17,17 @@ const Loader = () => {
     });
     gsap.to("#Dots .cls-1", {
       visibility: "hidden",
-      fill: "#191919",
-    })
+      fill: "#CC00FF",
+    });
     paths.forEach((path, index) => {
       gsap.to(path, {
         duration: 1,
         repeat: -1,
         ease: "power2.in",
-        delay: .8 + index * .1, // Stagger the delay
-        fill: "#F4FF00",
+        delay: 0.8 + index * 0.1, // Stagger the delay
+        fill: "#fff",
       });
-    })
+    });
     tl.from("#TextTop .cls-1", {
       yPercent: -200,
       stagger: 0.03,
@@ -52,12 +52,12 @@ const Loader = () => {
       .to("#Dots .cls-1", {
         visibility: "visible",
       })
-    
+
       .to(
         "#TextTop .cls-1",
         {
           skewY: 10,
-          y:100,
+          y: 100,
           stagger: 0.02,
           opacity: 0,
           duration: 0.15,
@@ -67,18 +67,22 @@ const Loader = () => {
       .to(
         "#TextBottom .cls-1",
         {
-            skewY: 10,
-            y:-100,
-            stagger: 0.02,
-            opacity: 0,
-            duration: 0.15,
+          skewY: 10,
+          y: -100,
+          stagger: 0.02,
+          opacity: 0,
+          duration: 0.15,
         },
         "<"
       )
-      .to("#Dots", {
-        opacity: 0,
-        ease: "bounce.out"
-      }, "<")
+      .to(
+        "#Dots",
+        {
+          opacity: 0,
+          ease: "bounce.out",
+        },
+        "<"
+      )
       .from(
         "#Arrow .cls-1",
         {
@@ -135,9 +139,13 @@ const Loader = () => {
   });
   return (
     <div className="grid justify-center place-content-center h-[100vh] overflow-visible z-2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1424.36 246.97" className="w-[50vw] overflow-visible">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1424.36 246.97"
+        className="w-[50vw] overflow-visible"
+      >
         <defs>
-          <style>{`.cls-1{fill:#F4FF00;}`}</style>
+          <style>{`.cls-1{fill:#CC00FF;}`}</style>
         </defs>
         <g id="Arrow" className="invisible">
           <rect className="cls-1" y="104.79" width="126" height="39" />
@@ -359,7 +367,7 @@ const Loader = () => {
         </g>
       </svg>
 
-      <div className="reveal absolute h-[100vh] w-full top-0 left-0 z-[-1] bg-[#191919]"></div>
+      <div className="reveal absolute h-[100vh] w-full top-0 left-0 z-[-1] bg-[#fff]"></div>
     </div>
   );
 };

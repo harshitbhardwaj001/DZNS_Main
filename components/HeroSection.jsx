@@ -45,7 +45,7 @@ export const HeroSection = () => {
             {/* <li>facebook</li> */}
           </ul>
         </div>
-        <div className="relative w-full z-100 flex justify-center items-center z-[100]">
+        {/* <div className="relative w-full z-100 flex justify-center items-center z-[100]">
           <a href="#about">
             <div className="w-[2.2vw] h-[6.7vh] top-[90vh] rounded-3xl border-2 border-secondary flex justify-center items-start p-2 absolute z-100">
               <motion.div
@@ -61,7 +61,7 @@ export const HeroSection = () => {
               />
             </div>
           </a>
-        </div>
+        </div> */}
       </div>
       <div className="gif-overlay"></div>
     </div>
