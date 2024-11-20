@@ -208,7 +208,7 @@ const Navbar = ({ clicked, setClicked }) => {
                 <div className="menu-item-revealer"></div>
               </div>
               <div className="menu-item">
-                <a href="/shop">
+                <a href="/services">
                   <span>III</span>Shop
                 </a>
                 <div className="menu-item-revealer"></div>
@@ -219,11 +219,11 @@ const Navbar = ({ clicked, setClicked }) => {
         <div className="secondary-menu">
           <div className="menu-container">
             <div className="wrapper">
-              {/* <div className="menu-item">
-                <a href="/contact">GET IN TOUCH</a>
+              <div className="menu-item">
+                <a href="/contact">Contact Us</a>
                 <div className="menu-item-revealer"></div>
-              </div> */}
-              {/* <div className="menu-item">
+              </div>
+              <div className="menu-item">
                 <a href="/games/dino">Time Pass</a>
                 <div className="menu-item-revealer"></div>
               </div>
@@ -242,7 +242,7 @@ const Navbar = ({ clicked, setClicked }) => {
                   </a>
                 )}
                 <div className="menu-item-revealer"></div>
-              </div> */}
+              </div>
               {/* <div className="menu-item">
                 <a href="#">Chat</a>
                 <div className="menu-item-revealer"></div>
@@ -250,8 +250,15 @@ const Navbar = ({ clicked, setClicked }) => {
             </div>
             <div className="wrapper ">
               <div className="menu-item mt-[50px]">
-                <a href="/contact">GET IN TOUCH</a>
-                {/* <div className="menu-item-revealer"></div> */}
+                {userInfo === undefined ? (
+                  <a href="#login" onClick={handleLogin}>
+                    Login/Signup
+                  </a>
+                ) : (
+                  <a href={`${userInfo?.isDesigner ? "/seller" : "/profile"}`}>
+                    Dashboard
+                  </a>
+                )}
               </div>
               <div className="menu-item-revealer"></div>
             </div>
