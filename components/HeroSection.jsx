@@ -8,9 +8,8 @@ export const HeroSection = () => {
   const text = "Graphics • Video Editing • UI/UX • Photography • SMM •";
 
   return (
-    <div className="wrapper1">
-      <div className="hero-section flex flex-col justify-center items-center relative h-screen">
-        
+    <div className="wrapper1 h-screen overflow-y-hidden">
+      <div className="hero-section flex flex-col justify-center items-center relative h-screen overflow-y-hidden">
         {/* Logo positioned at the top center */}
         <div className="absolute top-1 left-1/2 transform -translate-x-1/2 p-4 z-50">
           <img src="/logo.png" alt="Logo" className="w-40 h-auto" />
@@ -24,10 +23,18 @@ export const HeroSection = () => {
         {/* Social Media Links centered below SignUpCard */}
         <div className="absolute bottom-10 flex justify-center w-full z-[20]">
           <ul className="flex space-x-6 text-white">
-            <a href="https://www.instagram.com/studiodzns?igsh=MXY1NTR0eW92NXdrZA==" className="hover:opacity-70" target="_blank">
+            <a
+              href="https://www.instagram.com/studiodzns?igsh=MXY1NTR0eW92NXdrZA=="
+              className="hover:opacity-70"
+              target="_blank"
+            >
               <li>Instagram</li>
             </a>
-            <a href="https://www.linkedin.com/company/dzns/" className="hover:opacity-70" target="_blank">
+            <a
+              href="https://www.linkedin.com/company/dzns/"
+              className="hover:opacity-70"
+              target="_blank"
+            >
               <li>LinkedIn</li>
             </a>
             {/* <a href="https://facebook.com/"><li>Facebook</li></a> */}

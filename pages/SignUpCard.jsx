@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 const SignUpCard = () => {
   const [formData, setFormData] = useState({ name: "", email: "" });
-  const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,19 +24,22 @@ const SignUpCard = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("Sign-up successful!");
+        toast.success("Sign-up successful!");
         setFormData({ name: "", email: "" });
       } else {
-        setMessage(result.message || "Something went wrong.");
+        toast.error(result.message || "Something went wrong.");
       }
     } catch (error) {
       console.error(error);
-      setMessage("Failed to sign up. Please try again.");
+      toast.error("Failed to sign up. Please try again.");
     }
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen">
+      {/* Toast Notifications */}
+      <Toaster position="top-right" reverseOrder={false} />
+
       <div className="w-[70%] h-[50%] p-[2px] rounded-2xl bg-gradient-to-r from-[rgb(204,0,255)] to-[#FF005E]">
         <div className="w-full h-full bg-black text-white rounded-2xl p-4 flex justify-center flex-col items-center md:items-start">
           <h1 className="closer text-[20px] text-center md:text-left md:text-[44px] text-transparent bg-clip-text bg-gradient-to-r from-[#CC00FF] to-[#FF005E] leading-none whitespace-nowrap capitalize">
@@ -73,9 +76,6 @@ const SignUpCard = () => {
               </button>
             </div>
           </form>
-          {message && (
-            <p className="mt-4 text-sm text-center text-green-400">{message}</p>
-          )}
         </div>
       </div>
     </div>
