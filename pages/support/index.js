@@ -41,8 +41,10 @@ const Index = () => {
         {/* Support Content Centered */}
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10 bg-black/90 px-4">
           <div className="bg-transparent rounded-lg shadow-md p-6 text-center max-w-md w-full text-gray-800 space-y-4">
-            <h1 className="text-2xl font-semibold">Support</h1>
-            <div>
+            <h1 className="text-2xl font-semibold text-center text-white">
+              Support
+            </h1>
+            <div className="text-white">
               <p>
                 <strong>Address:</strong>
                 <br />
