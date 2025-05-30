@@ -37,6 +37,9 @@ export const HeroSection = () => {
             >
               <li>LinkedIn</li>
             </a>
+            <a href="/support" className="hover:opacity-70">
+              <li>Support</li>
+            </a>
             {/* <a href="https://facebook.com/"><li>Facebook</li></a> */}
           </ul>
         </div>

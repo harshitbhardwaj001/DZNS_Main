@@ -28,7 +28,7 @@ export default function Home() {
         display: "block",
         opacity: 1,
         delay: 6.5, // Set the duration of the animation
-      });  
+      });
       // tl.to("Nav", {
       //   delay: 0.2,
       // });
@@ -63,8 +63,8 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <div className="w-[100vw] overflow-hidden">
-        <main id="pageMain" className="bg-[#3E2A3E]">
-          {/* <LaunchTeaser /> */}
+        {/* <main id="pageMain" className="bg-[#3E2A3E]">
+          
 
           {isLoading && (
             <div className="block overflow-hidden fixed h-full w-full">
@@ -84,7 +84,7 @@ export default function Home() {
               <HeroSection />
               <div id="bgChange">
                 <About />
-                {/* <div className="absolute top-[100vh] z-[0] gif-overlay1"></div> */}
+                
                 <div className="hidden xs:max-md:block">
                   <Flowchart />
                 </div>
@@ -102,7 +102,8 @@ export default function Home() {
               <Sound />
             </div>
           </div>
-        </main>
+        </main> */}
+        <HeroSection />
       </div>
     </>
   );
