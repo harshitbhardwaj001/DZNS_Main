@@ -46,11 +46,11 @@ const Index = () => {
               <p>
                 <strong>Address:</strong>
                 <br />
-                123 Studio DZNS Street,
+                18/9,Chitrakoot building,
                 <br />
-                Design City, CA 90210,
+                Rafi Ahmed Kidwai road, Wadala west, Mumbai
                 <br />
-                United States
+                Maharashtra - 400031
               </p>
               <p>
                 <strong>Email:</strong>{" "}
